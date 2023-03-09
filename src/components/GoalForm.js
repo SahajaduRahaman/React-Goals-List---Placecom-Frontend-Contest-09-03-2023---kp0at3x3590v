@@ -23,7 +23,7 @@ const GoalForm = ({ allGoals, setAllGoals}) => {
     }
 
     const handleSubmit = (e) => {
-      e.preventdefault();
+      e.preventDefault();
       const newGoals = [...allGoals, formData];
       setAllGoals(newGoals);
       setFormData({
@@ -35,7 +35,7 @@ const GoalForm = ({ allGoals, setAllGoals}) => {
     return (
       <>
         <h1>My Goals</h1>
-        <form onSubmit={(e) => handleSubmit(e)}>
+        <form onSubmit={handleSubmit}>
           <input 
             type="text" 
             name='goal' 
@@ -50,7 +50,7 @@ const GoalForm = ({ allGoals, setAllGoals}) => {
             value={formData.by}
             onChange={handleBy}
           />
-          <button>Add</button>
+          <button type="submit">Add</button>
         </form>
       </>
     )
