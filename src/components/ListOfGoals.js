@@ -5,7 +5,7 @@ const ListOfGoals = ({ allGoals }) => {
       <ul>
         {allGoals.map((item, index) => (
           <li key={index}>
-              <p>My goal is to (item.name), by {item.by}.</p>
+              <p>My goal is to {item.goal}, by {item.by}.</p>
           </li>
         ))}
       </ul>
